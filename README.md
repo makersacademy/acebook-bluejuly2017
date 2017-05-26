@@ -1,11 +1,8 @@
 # AceBook
 
-**Coaches: Fork this repository to `acebook-cohortname` and customize
-the below**
-
 [You can find the week outline here.](https://github.com/makersacademy/course/tree/acebook/acebook)
 
-The card wall is here: [[[]]]
+[The card wall is here](https://trello.com/b/HPE5W1E6/acebook) (Need an invite? Ask on Slack!)
 
 ## Quickstart
 
