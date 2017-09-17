@@ -1,8 +1,8 @@
 # AceBook
 
-[You can find the week outline here.](https://github.com/makersacademy/course/tree/acebook/acebook)
+Check on Slack for the outline of the week.
 
-[The card wall is here](https://trello.com/b/HPE5W1E6/acebook) (Need an invite? Ask on Slack!)
+[The card wall is here](https://trello.com/b/VOOQlyWV/acebook-blue-july) (Need an invite? Slack!)
 
 ## Quickstart
 
