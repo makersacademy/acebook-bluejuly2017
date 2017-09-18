@@ -18,8 +18,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/acebook_database_dev
+  database: db/acebook_database_test
 
 production:
   <<: *default
-  database: db/acebook_database_dev
+  database: db/acebook_database_production
