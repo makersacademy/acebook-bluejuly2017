@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @profile = Profile.create(post_params)
+    @profile = Profile.create!(post_params)
     redirect_to profiles_url
   end
 

@@ -16,7 +16,7 @@ RSpec.describe ProfilesController, type: :controller do
 
     it "creates a profile" do
       post :create, params: { profile: { name: "John Smith"} }
-      expect(Profile.find_by(name: "John Smith")).to be
+      expect(Profile.find_by(name: "John Smith")).not_to be(nil)
     end
   end
 
