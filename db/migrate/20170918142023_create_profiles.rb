@@ -9,6 +9,7 @@ class CreateProfiles < ActiveRecord::Migration[5.1]
       t.string :birthday
 
       t.timestamps
+      add_foreign_key :profiles, :users, on_delete: :cascade
     end
   end
 end
