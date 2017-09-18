@@ -23,3 +23,5 @@ We're using:
 
 * RSpec for testing
 * [Clearance](https://github.com/thoughtbot/clearance) for user authentication
+
+Creating spreadsheet for code review, link will appear here
