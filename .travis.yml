@@ -1,20 +1,10 @@
 language: ruby
-
 rvm:
- - 2.4.0
-
- services:
- - postgresql
-
- before_script:
- - psql -c 'create database acebook_database_test;' -U postgres
- - psql -c 'create database acebook_database_dev;' -U postgres
- - psql -c 'create database acebook_database_production;' -U postgres
- - ./bin/server db:migrate
-
-test:
-  adapter: postgresql
-  database: acebook_database_test
-
-addons:
-  postgresql: "9.6.4"
+    - 2.4.0
+services:
+    - postgresql
+before_script:
+    - psql -c 'create database acebook_database_test;' -U postgres
+    - psql -c 'create database acebook_database_dev;' -U postgres
+    - psql -c 'create database acebook_database_production;' -U postgres
+    - ./bin/server db:migrate
