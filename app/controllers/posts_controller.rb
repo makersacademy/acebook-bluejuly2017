@@ -1,9 +1,4 @@
 class PostsController < ApplicationController
-  # def new
-  #   @post = Post.new
-  #   @posts = Post.all
-  # end
-
   def create
     @post = Post.create(post_params)
     redirect_to posts_url
@@ -11,7 +6,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = Post.all.sort_by {|post| post.created_at }
+    @posts = Post.all.sort_by { |post| post.created_at }.reverse
   end
 
   private

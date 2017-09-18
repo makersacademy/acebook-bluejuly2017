@@ -1,20 +1,28 @@
 require 'rails_helper'
+require 'helper_methods.rb'
 
 RSpec.feature "Timeline", type: :feature do
   scenario "Can submit posts and view them" do
     visit "/posts"
-    fill_in "Message", with: "Hello, world!"
-    click_button "Submit"
+    add_message('Hello, world!')
     expect(page).to have_content("Hello, world!")
   end
 
   scenario "Expect post to have timestamp" do
     visit "/posts"
-    time = (Time.now.utc)
-    fill_in "Message", with: "Hello, world!"
-    click_button "Submit"
-    post_time = time.strftime("%H:%M:%S")
-    post_date = time.strftime("%d %b %Y")
-    expect(page).to have_content("#{post_time}, #{post_date}")
+    add_message('Hello, world!')
+    time = format_time_and_date(Time.now.utc)
+    expect(page).to have_content("#{time}")
+  end
+
+  scenario "Posts are in reverse order" do
+    visit "/posts"
+    add_message('Message 1')
+    time1 = format_time_and_date(Time.now.utc)
+    add_message('Message 2')
+    time2 = format_time_and_date(Time.now.utc)
+    message1_string = "Message 1, created at #{time1}"
+    message2_string = "Message 2, created at #{time2}"
+    expect(page).to have_content("#{message2_string} #{message1_string}")
   end
 end

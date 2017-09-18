@@ -7,7 +7,7 @@
   <%= form.submit "Submit" %>
 <% end %>
 
-<% @posts.reverse.each do |post| %>
+<% @posts.each do |post| %>
   <p><%= post.message %>, created at
   <%= "#{post.created_at.strftime("%H:%M:%S")}, #{post.created_at.strftime("%d %b %Y")}"%></p>
 
