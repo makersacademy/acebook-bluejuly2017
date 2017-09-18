@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
-  def new
-    @post = Post.new
-  end
+  # def new
+  #   @post = Post.new
+  #   @posts = Post.all
+  # end
 
   def create
     @post = Post.create(post_params)
@@ -9,7 +10,8 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @post = Post.new
+    @posts = Post.all.sort_by {|post| post.created_at }
   end
 
   private
