@@ -1,0 +1,5 @@
+      invoke  active_record
+   identical    db/migrate/20170918141441_create_profiles.rb
+   identical    app/models/profile.rb
+      invoke    rspec
+   identical      spec/models/profile_spec.rb
