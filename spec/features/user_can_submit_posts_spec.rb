@@ -20,8 +20,9 @@ RSpec.feature "Timeline", type: :feature do
   scenario "Posts are in reverse order" do
     add_message('Message 2')
     time2 = format_time_and_date(Time.now.utc)
-    message1_string = "Message 1, created at #{@time1}"
-    message2_string = "Message 2, created at #{time2}"
+    message1_string = "Message 1 #{@time1}"
+    message2_string = "Message 2 #{time2}"
     expect(page).to have_content("#{message2_string} #{message1_string}")
   end
+
 end
