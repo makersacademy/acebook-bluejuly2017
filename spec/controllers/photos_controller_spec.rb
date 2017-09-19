@@ -52,7 +52,7 @@ RSpec.describe PhotosController, type: :controller do
   describe "GET #show" do
     it "returns a success response" do
       photo = Photo.create! valid_attributes
-      get :show, params: {id: photo.to_param}, session: valid_session
+      get :show, params: { id: photo.to_param }, session: valid_session
       expect(response).to be_success
     end
   end
@@ -67,7 +67,7 @@ RSpec.describe PhotosController, type: :controller do
   describe "GET #edit" do
     it "returns a success response" do
       photo = Photo.create! valid_attributes
-      get :edit, params: {id: photo.to_param}, session: valid_session
+      get :edit, params: { id: photo.to_param }, session: valid_session
       expect(response).to be_success
     end
   end
@@ -76,19 +76,19 @@ RSpec.describe PhotosController, type: :controller do
     context "with valid params" do
       it "creates a new Photo" do
         expect {
-          post :create, params: {photo: valid_attributes}, session: valid_session
+          post :create, params: { photo: valid_attributes }, session: valid_session
         }.to change(Photo, :count).by(1)
       end
 
       it "redirects to the created photo" do
-        post :create, params: {photo: valid_attributes}, session: valid_session
+        post :create, params: { photo: valid_attributes }, session: valid_session
         expect(response).to redirect_to(Photo.last)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: {photo: invalid_attributes}, session: valid_session
+        post :create, params: { photo: invalid_attributes }, session: valid_session
         expect(response).to be_success
       end
     end
@@ -102,14 +102,14 @@ RSpec.describe PhotosController, type: :controller do
 
       it "updates the requested photo" do
         photo = Photo.create! valid_attributes
-        put :update, params: {id: photo.to_param, photo: new_attributes}, session: valid_session
+        put :update, params: { id: photo.to_param, photo: new_attributes }, session: valid_session
         photo.reload
         skip("Add assertions for updated state")
       end
 
       it "redirects to the photo" do
         photo = Photo.create! valid_attributes
-        put :update, params: {id: photo.to_param, photo: valid_attributes}, session: valid_session
+        put :update, params: { id: photo.to_param, photo: valid_attributes }, session: valid_session
         expect(response).to redirect_to(photo)
       end
     end
@@ -117,7 +117,7 @@ RSpec.describe PhotosController, type: :controller do
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
         photo = Photo.create! valid_attributes
-        put :update, params: {id: photo.to_param, photo: invalid_attributes}, session: valid_session
+        put :update, params: { id: photo.to_param, photo: invalid_attributes }, session: valid_session
         expect(response).to be_success
       end
     end
@@ -127,13 +127,13 @@ RSpec.describe PhotosController, type: :controller do
     it "destroys the requested photo" do
       photo = Photo.create! valid_attributes
       expect {
-        delete :destroy, params: {id: photo.to_param}, session: valid_session
+        delete :destroy, params: { id: photo.to_param }, session: valid_session
       }.to change(Photo, :count).by(-1)
     end
 
     it "redirects to the photos list" do
       photo = Photo.create! valid_attributes
-      delete :destroy, params: {id: photo.to_param}, session: valid_session
+      delete :destroy, params: { id: photo.to_param }, session: valid_session
       expect(response).to redirect_to(photos_url)
     end
   end

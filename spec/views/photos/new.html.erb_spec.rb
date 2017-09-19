@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe "photos/new", type: :view do
   before(:each) do
     assign(:photo, Photo.new(
-      :description => "MyText",
-      :image => "MyString"
+      description: "MyText",
+      image: "MyString"
     ))
   end
 
