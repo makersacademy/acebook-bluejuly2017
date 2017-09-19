@@ -4,7 +4,5 @@ def add_message(message)
 end
 
 def format_time_and_date(time)
-  post_time = time.strftime("%H:%M:%S")
-  post_date = time.strftime("%d %b %Y")
-  return "#{post_time}, #{post_date}"
+  time.strftime("%H:%M:%S, %d %b %Y")
 end
