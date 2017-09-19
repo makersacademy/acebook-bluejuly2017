@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def downvote
-    @post.unliked_bygaa current_user
+    @post.unliked_by current_user
     redirect_to posts_url
   end
 

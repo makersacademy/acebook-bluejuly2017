@@ -26,6 +26,8 @@ gem "jbuilder", "~> 2.5"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'bootstrap-sass'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -40,6 +42,7 @@ group :development, :test do
   gem "capybara", "~> 2.13"
   gem "rspec-rails", "~> 3.5"
   gem "selenium-webdriver"
+  gem "launchy"
 end
 
 group :development do
