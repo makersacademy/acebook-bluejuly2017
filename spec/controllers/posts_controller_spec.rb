@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
 
   describe "POST /" do
+
     it "responds with 200" do
       post :create, params: { post: { message: "Hello, world!" } }
       expect(response).to redirect_to(posts_url)
@@ -18,6 +19,11 @@ RSpec.describe PostsController, type: :controller do
     it "responds with 200" do
       get :index
       expect(response).to have_http_status(200)
+    end
+
+    scenario "renders posts template" do
+      get :index
+      expect(response).to render_template 'posts/index'
     end
   end
 end

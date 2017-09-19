@@ -23,7 +23,7 @@ RSpec.feature "Visitor signs up" do
   end
 
   scenario "tries with blank password" do
-    sign_up_with "valid@example.com", "", "Michael", "I am Michael", "01/01/1970", "yoga, crack", "Earth" 
+    sign_up_with "valid@example.com", "", "Michael", "I am Michael", "01/01/1970", "yoga, crack", "Earth"
 
     expect_user_to_be_signed_out
   end
