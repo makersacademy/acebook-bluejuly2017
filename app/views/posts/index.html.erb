@@ -3,13 +3,16 @@
 <%= form_for @post do |form| %>
   <%= form.label :message %>
   <%= form.text_field :message %>
-
+  <%= form.label :user %>
+  <%= form.text_field :user %>
   <%= form.submit "Submit" %>
 <% end %>
 
 <% @posts_sorted.each do |post| %>
   <p><%= post.message %>, created at
-  <%= "#{post.created_at.strftime("%H:%M:%S, %d %b %Y")}"%>
+  <%= "#{post.created_at.strftime("%H:%M:%S, %d %b %Y")}"%>, created by
+  <%= "#{post.user}" %>
+
   </p>
 
 <% end %>

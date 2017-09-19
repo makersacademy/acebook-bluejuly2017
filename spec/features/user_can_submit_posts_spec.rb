@@ -24,4 +24,9 @@ RSpec.feature "Timeline", type: :feature do
     message2_string = "Message 2, created at #{time2}"
     expect(page).to have_content("#{message2_string} #{message1_string}")
   end
+
+  scenario "Expect post to show user after post" do
+    user1 = User.new
+    expect(page).to have_content("created by #{@user1}")
+  end
 end
