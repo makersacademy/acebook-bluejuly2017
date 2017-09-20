@@ -3,9 +3,9 @@
 
 
 <% if signed_in? %>
-  <form method= 'get' action="/users/<%= current_user.id%>/profile">
-    <input type="submit" value="Profile"></input>
-  </form>
+<a href="/users/<%= current_user.id%>/profile">
+  <button type="submit" value="Profile">Profile</button>
+</a>
 <% end %>
 
 

@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'helper_methods.rb'
 require "support/features/clearance_helpers"
 
-RSpec.feature "Timeline", type: :feature do
+RSpec.feature "Profile", type: :feature do
 
   describe "User is not signed in" do
 
@@ -22,11 +22,11 @@ RSpec.feature "Timeline", type: :feature do
     end
 
     scenario "button on posts page for user profile" do
-      expect(page).to have_selector('input[type=submit][value="Profile"]')
+      expect(page).to have_selector('button[type=submit][value="Profile"]')
     end
 
     scenario "user clicks profile button and is taken to profile page" do
-      click_button("Profile")
+      click_link("Profile")
       expect(page).to have_content('Hello')
     end
   end
