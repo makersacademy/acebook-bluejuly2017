@@ -18,21 +18,21 @@ class RandomImagesController < ApplicationController
 
   private
 
-    def valid_path?(item)
-      item != '.' or item != '..'
-    end
+  def valid_path?(item)
+    item != '.' || item != '..'
+  end
 
-    def image?(item)
-      item.include?('.jpg') || item.include?('.jpeg') || item.include?('.png')
-    end
+  def image?(item)
+    item.include?('.jpg') || item.include?('.jpeg') || item.include?('.png')
+  end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_random_image
-      @random_image = RandomImage.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_random_image
+    @random_image = RandomImage.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def random_image_params
-      params.fetch(:random_image, {})
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def random_image_params
+    params.fetch(:random_image, {})
+  end
 end

@@ -52,7 +52,7 @@ RSpec.describe RandomImagesController, type: :controller do
   describe "GET #show" do
     it "returns a success response" do
       random_image = RandomImage.create! valid_attributes
-      get :show, params: {id: random_image.to_param}, session: valid_session
+      get :show, params: { id: random_image.to_param }, session: valid_session
       expect(response).to be_success
     end
   end
@@ -67,7 +67,7 @@ RSpec.describe RandomImagesController, type: :controller do
   describe "GET #edit" do
     it "returns a success response" do
       random_image = RandomImage.create! valid_attributes
-      get :edit, params: {id: random_image.to_param}, session: valid_session
+      get :edit, params: { id: random_image.to_param }, session: valid_session
       expect(response).to be_success
     end
   end
@@ -76,19 +76,19 @@ RSpec.describe RandomImagesController, type: :controller do
     context "with valid params" do
       it "creates a new RandomImage" do
         expect {
-          post :create, params: {random_image: valid_attributes}, session: valid_session
+          post :create, params: { random_image: valid_attributes }, session: valid_session
         }.to change(RandomImage, :count).by(1)
       end
 
       it "redirects to the created random_image" do
-        post :create, params: {random_image: valid_attributes}, session: valid_session
+        post :create, params: { random_image: valid_attributes }, session: valid_session
         expect(response).to redirect_to(RandomImage.last)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: {random_image: invalid_attributes}, session: valid_session
+        post :create, params: { random_image: invalid_attributes }, session: valid_session
         expect(response).to be_success
       end
     end
@@ -102,14 +102,14 @@ RSpec.describe RandomImagesController, type: :controller do
 
       it "updates the requested random_image" do
         random_image = RandomImage.create! valid_attributes
-        put :update, params: {id: random_image.to_param, random_image: new_attributes}, session: valid_session
+        put :update, params: { id: random_image.to_param, random_image: new_attributes }, session: valid_session
         random_image.reload
         skip("Add assertions for updated state")
       end
 
       it "redirects to the random_image" do
         random_image = RandomImage.create! valid_attributes
-        put :update, params: {id: random_image.to_param, random_image: valid_attributes}, session: valid_session
+        put :update, params: { id: random_image.to_param, random_image: valid_attributes }, session: valid_session
         expect(response).to redirect_to(random_image)
       end
     end
@@ -117,7 +117,7 @@ RSpec.describe RandomImagesController, type: :controller do
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
         random_image = RandomImage.create! valid_attributes
-        put :update, params: {id: random_image.to_param, random_image: invalid_attributes}, session: valid_session
+        put :update, params: { id: random_image.to_param, random_image: invalid_attributes }, session: valid_session
         expect(response).to be_success
       end
     end
@@ -127,13 +127,13 @@ RSpec.describe RandomImagesController, type: :controller do
     it "destroys the requested random_image" do
       random_image = RandomImage.create! valid_attributes
       expect {
-        delete :destroy, params: {id: random_image.to_param}, session: valid_session
+        delete :destroy, params: { id: random_image.to_param }, session: valid_session
       }.to change(RandomImage, :count).by(-1)
     end
 
     it "redirects to the random_images list" do
       random_image = RandomImage.create! valid_attributes
-      delete :destroy, params: {id: random_image.to_param}, session: valid_session
+      delete :destroy, params: { id: random_image.to_param }, session: valid_session
       expect(response).to redirect_to(random_images_url)
     end
   end
