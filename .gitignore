@@ -24,3 +24,6 @@
 
 # Ignore simplecov html
 /coverage
+
+# ignore my twitter details
+.env

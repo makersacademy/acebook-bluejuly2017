@@ -1,5 +1,8 @@
 
 <h2>Newsfeed</h2>
+<h1>Wiz and Rozzle r da bezt</h1>
+
+
 <%= form_for @post do |form| %>
   <%= form.label :message %>
   <%= form.text_field :message %>
@@ -12,4 +15,19 @@
   <%= "#{post.created_at.strftime("%H:%M:%S, %d %b %Y")}"%>
   </p>
 
+
 <% end %>
+
+<h3>Twitter trends</h3>
+<% counter = 0 %>
+<% @twitter_trendlist.each do |trending| %>
+  <a href="<%=trending.url %>"><%=trending.name %></a>
+  <%if trending.tweet_volume.nil? %>
+  <%= "n/a" %>
+  <% else %>
+  <%= number_with_delimiter(trending.tweet_volume, :delimiter => ',') %>
+  <% end %>
+  <% counter += 1 %>
+  <% break if counter >= 10 %>
+  <br>
+<%end%>

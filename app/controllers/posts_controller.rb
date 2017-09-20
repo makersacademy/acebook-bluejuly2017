@@ -1,3 +1,4 @@
+require_relative "../../lib/twitter_api"
 class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
@@ -7,6 +8,8 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     @posts_sorted = Post.all.sort_by { |post| post.created_at }.reverse
+
+    @twitter_trendlist = TwitterApi.our_public_tweets
   end
 
   private
