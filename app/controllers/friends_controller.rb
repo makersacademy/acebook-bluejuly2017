@@ -25,14 +25,20 @@ class FriendsController < ApplicationController
   # POST /friends
   # POST /friends.json
   def create
-    @friend = Friend.new(friend_params)
+    @new_friend_name = friend_params["body"]
+
+    friend_not_already_in_db = !(Friend.exists?(body: @new_friend_name))
+    user_exists = User.exists?(name: @new_friend_name)
+
+    @friend = Friend.new(friend_params) if (user_exists && friend_not_already_in_db)
 
     respond_to do |format|
-      if @friend.save
+      if !(@friend.nil?)
+        @friend.save
         format.html { redirect_to index, notice: 'Friend was successfully created.' }
         format.json { render :show, status: :created, location: @friend }
       else
-        format.html { render :new }
+        format.html { redirect_to index, notice: 'User was not found.' }
         format.json { render json: @friend.errors, status: :unprocessable_entity }
       end
     end

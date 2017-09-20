@@ -11,7 +11,7 @@ RSpec.feature "Visitor signs up" do
   end
 
   scenario "with valid email and password" do
-    sign_up_with "valid@example.com", "password"
+    sign_up_with "valid@example.com", "password", '31/01/94', "Matz"
 
     expect_user_to_be_signed_in
   end
