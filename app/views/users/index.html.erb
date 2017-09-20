@@ -11,11 +11,13 @@
   </div>
 <% end %>
 
-
 <% for friend in @friendships %>
     <p>
-      <strong><%= friend.friend_id %></strong>
+      <%=h @users.find(friend.friend_id).email  %>
+      <!-- <strong><%= friend.friend_id %></strong> -->
       <%= link_to "Remove Friend", friend, :method => :delete %>
       <div class="clear"></div>
     </p>
 <% end %>
+
+<%=h User.all.find(1)  %>

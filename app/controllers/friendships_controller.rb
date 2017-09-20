@@ -10,8 +10,11 @@ class FriendshipsController < ApplicationController
       current_user.id.to_s == params[:friend_id].to_s
     end
 
-    @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
-    if !friendship_exists && !friending_self && @friendship.save
+    @friendship1 = current_user.friendships.build(:friend_id => params[:friend_id])
+
+    # @friendship2 = User.all.find(params[:friend_id]).friendships.build(:friend_id => current_user)
+
+    if !friendship_exists && !friending_self && @friendship1.save && @friendship2.save
       flash[:notice] = "Added friend."
       redirect_to root_url
     else
