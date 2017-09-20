@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   resources :posts
 
-
   get '/users/:id/profile', to: 'users#show'
 
   root to: redirect('/posts')
