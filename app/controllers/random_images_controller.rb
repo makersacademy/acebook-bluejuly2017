@@ -1,22 +1,32 @@
 class RandomImagesController < ApplicationController
-  # before_action :set_random_image, only: [:show, :edit, :update, :destroy]
 
-  # GET /random_images
-  # GET /random_images.json
+  IMAGE_PATH = "app/assets/images"
+
   def index
-    p path = "app/assets/images"
-    images = []
+    images = get_images
+    @random_image = random_image(images)
+  end
 
-    Dir.foreach(path) do |item|
-      next if valid_path?(item) && !image?(item)
-      images << item
-    end
-    index = rand(0...images.length)
-    this_image = images[index]
-    @random_image_html = this_image
+  def reload
+    images = get_images
+    return random_image(images)
   end
 
   private
+
+  def random_image(image_array)
+    index = rand(0...image_array.length)
+    image_array[index]
+  end
+
+  def get_images
+    images = []
+    Dir.foreach(IMAGE_PATH) do |item|
+      next if valid_path?(item) && !image?(item)
+      images << item
+    end
+    images
+  end
 
   def valid_path?(item)
     item != '.' || item != '..'

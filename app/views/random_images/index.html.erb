@@ -13,7 +13,7 @@
 
   <section id="image-holder">
     <div id ="random-image">
-      <%= image_tag(@random_image_html) %>
+      <%= image_tag(@random_image) %>
     </div>
   </section>
 
@@ -27,7 +27,8 @@
 </center>
 
 <script>
-  setTimeout(function() {
+  var reload = function() {
     location.reload();
-  }, 3000);
+  };
+  setTimeout(reload, 3000);
 </script>
