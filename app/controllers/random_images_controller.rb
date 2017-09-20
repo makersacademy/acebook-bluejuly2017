@@ -1,9 +1,21 @@
 class RandomImagesController < ApplicationController
-  before_action :set_random_image, only: [:show, :edit, :update, :destroy]
+  # before_action :set_random_image, only: [:show, :edit, :update, :destroy]
 
   # GET /random_images
   # GET /random_images.json
   def index
+    path = "public/images"
+    images = []
+
+    Dir.foreach(path) do |item|
+      # assumed that items are .jpeg
+      next if item == '.' or item == '..'
+
+      images << item
+    end
+    index = rand(0...images.length)
+    this_image = images[index]
+    @random_image_html = "<img src=\"#{path}/#{this_image}\" alt=\"a random image\" />"
   end
 
   private
