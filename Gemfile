@@ -28,6 +28,11 @@ gem "jbuilder", "~> 2.5"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Chat room
+gem 'devise'
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'coffee-rails'
+gem 'redis', '~> 3.2'
 
 group :test do
   gem "factory_girl_rails"
