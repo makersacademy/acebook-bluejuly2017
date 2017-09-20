@@ -1,6 +1,6 @@
 class TwitterApi
 
-  def self.our_public_tweets
+  def self.trendinglist
     client.trends(id = 23424975)#, lang: "en") # should be .trends(id=1...
   end
 

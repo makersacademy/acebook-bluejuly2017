@@ -30,6 +30,19 @@ end
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  config.before(:each) do
+    Timecop.freeze(Time.now)
+    mocklist = [{name: "Will", url: "http://www.google.com", tweet_volume: "1"},{name: "Rolando", url: "http://www.google.com", tweet_volume: "2"}]
+    allow(TwitterApi).to receive(:trendinglist).and_return(mocklist)
+    # allow(TwitterApi).to receive(:trendinglist).and_return("")
+  end
+
+
+
+ config.after(:each) do
+    Timecop.return
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

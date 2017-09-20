@@ -21,11 +21,11 @@
 <h3>Twitter trends</h3>
 <% counter = 0 %>
 <% @twitter_trendlist.each do |trending| %>
-  <a href="<%=trending.url %>"><%=trending.name %></a>
-  <%if trending.tweet_volume.nil? %>
+  <a href="<%=trending[:url] %>"><%=trending[:name] %></a>
+  <%if trending[:tweet_volume].nil? %>
   <%= "n/a" %>
   <% else %>
-  <%= number_with_delimiter(trending.tweet_volume, :delimiter => ',') %>
+  <%= number_with_delimiter(trending[:tweet_volume], :delimiter => ',') %>
   <% end %>
   <% counter += 1 %>
   <% break if counter >= 10 %>
