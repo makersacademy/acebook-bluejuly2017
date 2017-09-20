@@ -10,13 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919102348) do
+ActiveRecord::Schema.define(version: 20170920153213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "chat_rooms", force: :cascade do |t|
+    t.string "title"
+    t.bigint "chatuser_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatuser_id"], name: "index_chat_rooms_on_chatuser_id"
+  end
+
+  create_table "chatmessages", force: :cascade do |t|
+    t.text "body"
+    t.bigint "chatuser_id"
+    t.bigint "chat_room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chat_room_id"], name: "index_chatmessages_on_chat_room_id"
+    t.index ["chatuser_id"], name: "index_chatmessages_on_chatuser_id"
+  end
+
+  create_table "chatusers", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_chatusers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_chatusers_on_reset_password_token", unique: true
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "message"
@@ -40,4 +72,7 @@ ActiveRecord::Schema.define(version: 20170919102348) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
+  add_foreign_key "chat_rooms", "chatusers"
+  add_foreign_key "chatmessages", "chat_rooms"
+  add_foreign_key "chatmessages", "chatusers"
 end
