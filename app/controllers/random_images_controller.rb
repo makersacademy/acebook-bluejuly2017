@@ -13,7 +13,6 @@ class RandomImagesController < ApplicationController
     end
     index = rand(0...images.length)
     this_image = images[index]
-    puts this_image
     @random_image_html = this_image
   end
 
