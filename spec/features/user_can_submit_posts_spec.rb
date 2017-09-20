@@ -26,9 +26,8 @@ RSpec.feature "Timeline", type: :feature do
   end
 
   scenario "Expect post to show hyperlink" do
-    add_message('www.google.com')
-    click_link('www.google.com')
-    expect(find_link('www.google.com')).visible?
+    add_message('this is not a link but this is -> www.google.com')
+    find_link('www.google.com').visible?
   end
 
 
