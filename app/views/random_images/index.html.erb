@@ -1,3 +1,15 @@
-<h1>Random Images</h1>
+<center>
 
-<%= image_tag(@random_image_html) %>
+<div id = "image"><%= image_tag(@random_image_html) %></div>
+
+<form action="/random_images" method = "get">
+<input type="submit" value="Change kitty piccy">
+</form>
+
+</center>
+
+<script>
+  setTimeout(function() {
+    location.reload();
+  }, 3000);
+</script>
