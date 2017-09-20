@@ -3,20 +3,6 @@
   <div class="centered">
 <h2>Newsfeed</h2>
 <%= form_for @post do |form| %>
-<<<<<<< HEAD
-  <%= form.label :message %>
-  <%= form.text_area :message %>
-
-  <%= form.submit "Submit" %>
-<% end %>
-
-<% @posts_sorted.each do |post| %>
-  <p><%= simple_format(post.message) %>
-  <%= simple_format("#{post.created_at.strftime("%H:%M:%S, %d %b %Y")}")%>
-  </p>
-  <br>
-
-=======
     <%= form.label :message %>
     <%= form.text_area :message %>
     <%= form.submit "Submit" %>
@@ -35,7 +21,6 @@
           <button id="unlikePost<%=post.id %>">Unlike</button>
     <% end %>
         <br>
->>>>>>> stephen
 <% end %>
   </div>
 </div>

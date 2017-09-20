@@ -1,5 +1,6 @@
 require 'rails_helper'
 require 'helper_methods.rb'
+require "support/features/clearance_helpers"
 
 RSpec.feature "Timeline", type: :feature do
 
@@ -24,8 +25,9 @@ RSpec.feature "Timeline", type: :feature do
   end
 
   scenario "Liking posts increases the like counter" do
-    latest_post_id = Post.last.id
-    click_button "likePost#{latest_post_id}"
+    latest_post_id = Post.first.id
+    puts Post.first.id
+    click_link I18n.t "likePost#{latest_post_id}"
     save_and_open_page
     expect(page).to have_content ("1 like this")
 
