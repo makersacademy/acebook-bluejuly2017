@@ -9,8 +9,7 @@ class RandomImagesController < ApplicationController
 
     Dir.foreach(path) do |item|
       # assumed that items are .jpeg
-      next if item == '.' or item == '..'
-
+      next if !valid?
       images << item
     end
     index = rand(0...images.length)
@@ -19,6 +18,11 @@ class RandomImagesController < ApplicationController
   end
 
   private
+
+    def valid?
+      return false if item == '.' or item == '..'
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_random_image
       @random_image = RandomImage.find(params[:id])
