@@ -1,2 +1,0 @@
-class FriendslistController < ApplicationController
-end

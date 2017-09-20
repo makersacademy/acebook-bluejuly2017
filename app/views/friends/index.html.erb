@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Friends</h1>
+
+<%= render 'form', friend: @friend %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @friends.each do |friend| %>
+      <tr>
+        <td><%= friend.body %></td>
+        <td><%= link_to 'Show', friend %></td>
+
+        <td><%= link_to 'Remove Friend', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
