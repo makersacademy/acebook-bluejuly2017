@@ -23,10 +23,15 @@ module Features
       click_button I18n.t("layouts.application.sign_out")
     end
 
-    def sign_up_with(email, password)
+    def sign_up_with(email, password, name, bio, dob, interests, location)
       visit sign_up_path
       fill_in "user_email", with: email
       fill_in "user_password", with: password
+      fill_in "user_name", with: name
+      fill_in "user_dob", with: dob
+      fill_in "user_bio", with: bio
+      fill_in "user_interests", with: interests
+      fill_in "user_location", with: location
       click_button I18n.t("helpers.submit.user.create")
     end
 
