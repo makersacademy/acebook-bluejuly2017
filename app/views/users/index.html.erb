@@ -1,7 +1,8 @@
 
 
-
-<% for user in @users %>
+<h2> Users </h2>
+<% for user in @users
+next if current_user.friendships.exists?(friend_id: user) %>
   <div class="user">
     <p>
       <strong><%=h user.email %></strong>
@@ -10,14 +11,15 @@
     </p>
   </div>
 <% end %>
+<br/>
+<br/>
+<h2> Friends </h2>
 
-<% for friend in @friendships %>
+<% for friendship in @friendships %>
     <p>
-      <%=h @users.find(friend.friend_id).email  %>
-      <!-- <strong><%= friend.friend_id %></strong> -->
-      <%= link_to "Remove Friend", friend, :method => :delete %>
+      <%=h @users.find(friendship.friend_id).email  %>
+
+      <%= link_to "Remove Friendship", friendship, :method => :delete %>
       <div class="clear"></div>
     </p>
 <% end %>
-
-<%=h User.all.find(1)  %>
