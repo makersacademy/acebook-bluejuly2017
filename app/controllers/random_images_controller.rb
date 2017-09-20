@@ -8,19 +8,23 @@ class RandomImagesController < ApplicationController
     images = []
 
     Dir.foreach(path) do |item|
-      # assumed that items are .jpeg
-      next if !valid?
+      next if valid_path?(item) && !image?(item)
       images << item
     end
     index = rand(0...images.length)
     this_image = images[index]
-    @random_image_html = "#{this_image}"
+    puts this_image
+    @random_image_html = this_image
   end
 
   private
 
-    def valid?
-      return false if item == '.' or item == '..'
+    def valid_path?(item)
+      item != '.' or item != '..'
+    end
+
+    def image?(item)
+      item.include?('.jpg') || item.include?('.jpeg') || item.include?('.png')
     end
 
     # Use callbacks to share common setup or constraints between actions.
