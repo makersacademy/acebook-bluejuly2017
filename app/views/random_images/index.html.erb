@@ -1,11 +1,19 @@
 <center>
+  <section id="left-ad" style="display: inline-block; background: blue; width: 200px; height: 500px">
 
-<div id = "image"><%= image_tag(@random_image_html) %></div>
+  </section>
 
-<form action="/random_images" method = "get">
-<input type="submit" value="Change kitty piccy">
-</form>
+  <section id="image-holder" style="display: inline-block; height:500px; width: 800px;">
 
+    <div id = "random-image" style="width: 100%; width: 100%;"><%= image_tag(@random_image_html) %></div>
+    <!-- <form action="/random_images" method = "get">
+    <input type="submit" value="Change kitty piccy">
+    </form> -->
+  </section>
+
+  <section id="right-ad" style="display: inline-block; background: blue; width: 200px; height: 500px">
+
+  </section>
 </center>
 
 <script>
