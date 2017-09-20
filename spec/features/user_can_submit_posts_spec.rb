@@ -28,10 +28,8 @@ RSpec.feature "Timeline", type: :feature do
     latest_post_id = Post.last.id
     puts Post.last.id
     click_link("Like")
-    # likePost#{latest_post_id}
     save_and_open_page
     expect(page).to have_content ("1 like this")
-
   end
 
   scenario "Posts are in reverse order" do
