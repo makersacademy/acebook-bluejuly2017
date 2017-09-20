@@ -1,10 +1,21 @@
 
+
+
 <% for user in @users %>
   <div class="user">
     <p>
       <strong><%=h user.email %></strong>
-      <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+      <%= link_to "Add Friend", friendships_path(:friend_id => user.id), :method => :post %>
       <div class="clear"></div>
     </p>
   </div>
+<% end %>
+
+
+<% for friend in @friendships %>
+    <p>
+      <strong><%= friend.friend_id %></strong>
+      <%= link_to "Remove Friend", friend, :method => :delete %>
+      <div class="clear"></div>
+    </p>
 <% end %>
