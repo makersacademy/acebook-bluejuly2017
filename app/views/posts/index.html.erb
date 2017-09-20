@@ -1,5 +1,14 @@
 
 <h2>Newsfeed</h2>
+
+
+<% if signed_in? %>
+<a href="/users/<%= current_user.id%>/profile">
+  <button type="submit" value="Profile">Profile</button>
+</a>
+<% end %>
+
+
 <%= form_for @post do |form| %>
   <%= form.label :message %>
   <%= form.text_field :message %>

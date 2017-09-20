@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   resources :posts
   resources :users, controller: 'users', only: 'create'
 
+  get '/users/:id/profile', to: 'users#show'
+
+  resources :users, controller: 'users', only: 'create'
+
   root to: redirect('/posts')
 end
