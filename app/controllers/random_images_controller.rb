@@ -4,7 +4,7 @@ class RandomImagesController < ApplicationController
   # GET /random_images
   # GET /random_images.json
   def index
-    path = "public/images"
+    p path = "app/assets/images"
     images = []
 
     Dir.foreach(path) do |item|
@@ -15,7 +15,7 @@ class RandomImagesController < ApplicationController
     end
     index = rand(0...images.length)
     this_image = images[index]
-    @random_image_html = "<img src=\"#{path}/#{this_image}\" alt=\"a random image\" />"
+    @random_image_html = "#{this_image}"
   end
 
   private
