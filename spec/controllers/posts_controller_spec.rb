@@ -21,7 +21,7 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to have_http_status(200)
     end
 
-    scenario "renders posts template" do
+    it "renders posts template" do
       get :index
       expect(response).to render_template 'posts/index'
     end
