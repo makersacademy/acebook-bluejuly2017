@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get '/users/:id/profile', to: 'users#show'
 
   root to: redirect('/posts')
+
+  resources :insults
+
+  get '/posts/insult'
 end

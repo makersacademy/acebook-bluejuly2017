@@ -1,6 +1,4 @@
 
-<script type="text/javascript" src="javascripts/random_insult.js"></script>
-
 <h2>Newsfeed</h2>
 
 
@@ -30,18 +28,16 @@
 <% end %>
 
 <script>
-   $.getJSON('insults.json', function(data) {
-        var adjective = data.adjective[Math.floor(Math.random()*data.adjective.length)];
-        var noun = data.noun[Math.floor(Math.random()*data.noun.length)];
-
-   });
   var btn = document.getElementById("insult-randomizer");
   btn.addEventListener("click", function() {
-    # // var insult = generate random insult
-  
 
-    # // make post request to /posts/create => {message: insult}
-    # // check response code is 200
-    # // win
+    $.getJSON('json/insults.json', function(data) {
+        var adjective = data.adjective[Math.floor(Math.random()*data.adjective.length)];
+        var noun = data.noun[Math.floor(Math.random()*data.noun.length)];
+        var insult = adjective + " " + noun 
+        $.post("posts/create", { message: insult })
+    });
   });
+
+
 </script>
