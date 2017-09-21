@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get '/users/:id/profile', to: 'users#show'
 
-  get '/posts/:id/destroy', to: 'post#destroy'
+  post '/posts/:id', to: 'posts#destroy'
 
   root to: redirect('/posts')
 end
