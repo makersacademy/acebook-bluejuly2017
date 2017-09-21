@@ -26,7 +26,7 @@
       <%= link_to unlike_post_path(post), method: :put do %>
         <button name="unlikePost<%=post.id %>">Unlike</button>
       <% end %>
-      <%= link_to 'Delete', post_path(post), :method => :delete, :confirm => "Are you sure?" %>
+      <%= link_to 'Delete', post_path(post), method: :delete %>
       <br>
     <% end %>
   </div>
