@@ -5,6 +5,11 @@ class PostsController < ApplicationController
     redirect_to posts_url
   end
 
+  def destroy
+    @post = Post.destroy(post_params)
+    redirect_to posts_url
+  end
+
   def index
     @post = Post.new
     @posts_sorted = Post.all.sort_by { |post| post.created_at }.reverse
