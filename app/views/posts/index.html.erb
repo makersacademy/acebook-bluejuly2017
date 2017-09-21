@@ -6,6 +6,12 @@
   </a>
 <% end %>
 
+<% if signed_in? %>
+  <a href="/friendships">
+    <button type="submit" value="View Friends">View Friends</button>
+  </a>
+<% end %>
+
   <div class="centered">
     <h2>Newsfeed</h2>
     <%= form_for @post do |form| %>
