@@ -34,6 +34,7 @@ gem "rails_autolink"
 
 group :test do
   gem "factory_girl_rails"
+  gem "rails-controller-testing"
 end
 
 group :development, :test do
