@@ -38,13 +38,19 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_as_votable (0.10.0)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     ansi (1.5.0)
     arel (8.0.0)
     ast (2.3.0)
+    autoprefixer-rails (7.1.2.6)
+      execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.15.1)
@@ -86,6 +92,8 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     json (2.1.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -132,6 +140,8 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_autolink (1.1.6)
+      rails (> 3.1)
     railties (5.1.4)
       actionpack (= 5.1.4)
       activesupport (= 5.1.4)
@@ -225,17 +235,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_votable
+  bootstrap-sass
   byebug
   capybara (~> 2.13)
   carrierwave (~> 0.10.0)
   clearance
   factory_girl_rails
   jbuilder (~> 2.5)
+  launchy
   listen (>= 3.0.5, < 3.2)
   mini_magick (~> 4.3)
   pg
   puma (~> 3.7)
   rails (~> 5.1.1)
+  rails_autolink
   rspec-rails (~> 3.5)
   rubocop (= 0.48.1)
   rubocop-rails
