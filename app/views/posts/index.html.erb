@@ -1,26 +1,26 @@
 <div class="container">
 
   <div class="centered">
-<h2>Newsfeed</h2>
-<%= form_for @post do |form| %>
+    <h2>Newsfeed</h2>
+    <%= form_for @post do |form| %>
     <%= form.label :message %>
     <%= form.text_area :message %>
     <%= form.submit "Submit" %>
-<% end %>
+    <% end %>
 
-<% @posts_sorted.each do |post| %>
+    <% @posts_sorted.each do |post| %>
     <p><%= simple_format(post.message) %>
       <%= "#{post.created_at.strftime("%H:%M:%S, %d %b %Y")}"%>
     </p>
     <span><%= post.get_upvotes.size %> like this</span>
     <br>
     <%= link_to like_post_path(post), method: :put do %>
-        <button name="likePost<%=post.id %>">Like</button>
+    <button name="likePost<%=post.id %>">Like</button>
     <% end %>
     <%= link_to unlike_post_path(post), method: :put do %>
-          <button name="unlikePost<%=post.id %>">Unlike</button>
+    <button name="unlikePost<%=post.id %>">Unlike</button>
     <% end %>
-        <br>
-<% end %>
+    <br>
+    <% end %>
   </div>
 </div>

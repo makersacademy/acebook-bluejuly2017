@@ -26,9 +26,7 @@ RSpec.feature "Timeline", type: :feature do
 
   scenario "Liking posts increases the like counter" do
     latest_post_id = Post.last.id
-    puts Post.last.id
     click_link("Like")
-    save_and_open_page
     expect(page).to have_content ("1 like this")
   end
 
