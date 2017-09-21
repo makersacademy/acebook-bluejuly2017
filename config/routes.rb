@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/users/:id/profile', to: 'users#show'
 
-  resources :users, controller: 'users', only: 'create'
+  get '/users/:id/edit', to: 'users#edit'
 
   root to: redirect('/posts')
 end

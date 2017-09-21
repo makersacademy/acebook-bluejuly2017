@@ -6,3 +6,7 @@ DOB: <%= current_user.dob %>
 Interests: <%= current_user.interests %>
 <br>
 Location: <%= current_user.location %>
+<br>
+<a href="/users/<%= current_user.id%>/edit">
+  <button type="submit" value="Edit">Edit</button>
+</a>

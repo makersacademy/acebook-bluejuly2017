@@ -5,6 +5,10 @@ class UsersController < Clearance::UsersController
     @user = current_user
   end
 
+  def update
+    @user = current_user
+  end
+
   private
 
   def user_from_params

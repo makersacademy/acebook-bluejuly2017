@@ -32,7 +32,20 @@ RSpec.feature "Profile", type: :feature do
       expect(page).to have_content('DOB: 01/01/1970')
       expect(page).to have_content('Interests: yoga, crack')
       expect(page).to have_content('Location: Earth')
+      expect(page).to have_link('Edit')
     end
+
+
+    scenario "user edits profile" do
+      click_link("Profile")
+      click_link("Edit")
+      expect(page).to have_selector("input[type='name']")
+      expect(page).to have_selector("input[type='dob']")
+      expect(page).to have_selector("input[type='interests']")
+      expect(page).to have_selector("input[type='bio']")
+    end
+
   end
+
 
 end
