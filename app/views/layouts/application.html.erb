@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Acebook</title>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-  <div id="header">
-    <% if signed_in? -%>
-      <%= button_to t(".sign_out"), sign_out_path, method: :delete %>
-    <% else -%>
-      <%= link_to t(".sign_in"), sign_in_path %>
-    <% end -%>
-  </div>
-  
+  <head>
+    <title>Acebook</title>
+    <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
@@ -62,7 +52,7 @@
     <% if signed_in? %>
         Signed in as: <%= current_user.email %>
     <% end %>
-  </div>
+
 
     <div id="flash">
       <% flash.each do |key, value| %>
