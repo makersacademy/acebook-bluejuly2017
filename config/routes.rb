@@ -5,6 +5,21 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
 
+
+
+  resources :random_images
+
+  resources :posts do
+    member do
+      put "like" => "posts#upvote"
+      put "unlike" => "posts#downvote"
+    end
+  end
+
+  get '/users/:id/profile', to: 'users#show'
+
+
+
   root to: redirect('/posts')
 
 end

@@ -1,0 +1,21 @@
+.add-space {
+  display: inline-block;
+  width: 120px;
+  height: 500px;
+}
+
+#image-holder {
+  display: inline-block;
+  height:500px;
+  width: 900px;
+}
+
+#random-image {
+  width: 100%;
+  padding: 0px;
+}
+
+.amazon-add {
+  width:120px;
+  height:240px
+}
