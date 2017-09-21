@@ -1,0 +1,103 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
+        1,
+        1,
+        1,
+        10,
+        10,
+        null,
+        null,
+        1,
+        37,
+        48,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        10,
+        null,
+        null
+      ],
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/post.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1505992700
+  }
+}
