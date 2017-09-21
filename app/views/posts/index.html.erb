@@ -1,11 +1,17 @@
 <div class="container">
 
+<% if signed_in? %>
+  <a href="/users/<%= current_user.id%>/profile">
+    <button type="submit" value="Profile">Profile</button>
+  </a>
+<% end %>
+
   <div class="centered">
     <h2>Newsfeed</h2>
     <%= form_for @post do |form| %>
-    <%= form.label :message %>
-    <%= form.text_area :message %>
-    <%= form.submit "Submit" %>
+      <%= form.label :message %>
+      <%= form.text_area :message %>
+      <%= form.submit "Submit" %>
     <% end %>
 
     <% @posts_sorted.each do |post| %>
