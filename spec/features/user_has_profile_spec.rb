@@ -19,7 +19,6 @@ RSpec.feature "Profile", type: :feature do
 
     before(:each) do
       sign_up_with("michael@example.com", "secretpassword")
-      # sign_in
     end
 
     scenario "button on posts page for user profile" do
@@ -36,13 +35,13 @@ RSpec.feature "Profile", type: :feature do
     end
 
 
-    scenario "user edits profile" do
+    scenario "user clicks button to go to edit page" do
       click_link("Profile")
       click_link("Edit")
-      expect(page).to have_selector("input[type='name']")
-      expect(page).to have_selector("input[type='dob']")
-      expect(page).to have_selector("input[type='interests']")
-      expect(page).to have_selector("input[type='bio']")
+      expect(page).to have_selector("input[type='text'][value='Michael']")
+      expect(page).to have_selector("input[type='text'][value='01/01/1970']")
+      expect(page).to have_selector("input[type='text'][value='yoga, crack']")
+      expect(page).to have_selector("input[type='text'][value='Earth']")
     end
 
   end
