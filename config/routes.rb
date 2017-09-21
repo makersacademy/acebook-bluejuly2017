@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   get '/users/:id/profile', to: 'users#show'
 
+  get '/newshineything', to: 'newshineything#index'
+
   root to: redirect('/posts')
 end

@@ -1,0 +1,2 @@
+class Newshineything < ApplicationRecord
+end

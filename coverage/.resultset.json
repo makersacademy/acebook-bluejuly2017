@@ -1,11 +1,30 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/helpers/application_helper.rb": [
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/helpers/newshineything_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/controllers/newshineything_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
         1,
         1,
         1,
@@ -39,30 +58,28 @@
         null,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/application_controller.rb": [
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/models/newshineything.rb": [
         1,
+        null
+      ],
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/post.rb": [
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/models/post.rb": [
         1,
         1,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/user.rb": [
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/models/user.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/users_controller.rb": [
+      "/Users/abitravers/gitDir/acebookday4/acebook-bluejuly2017/app/controllers/users_controller.rb": [
         1,
         null,
         1,
@@ -98,6 +115,6 @@
         null
       ]
     },
-    "timestamp": 1505992700
+    "timestamp": 1506004718
   }
 }
