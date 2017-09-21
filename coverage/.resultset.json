@@ -5,6 +5,10 @@
         1,
         null
       ],
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/helpers/random_images_helper.rb": [
+        1,
+        null
+      ],
       "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
         1,
         1,
@@ -14,7 +18,6 @@
         9,
         null,
         null,
-        1,
         1,
         1,
         1,
@@ -50,6 +53,45 @@
         1,
         1,
         1,
+        null
+      ],
+      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/random_images_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        4,
+        4,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        4,
+        4,
+        null,
+        null,
+        1,
+        4,
+        4,
+        28,
+        20,
+        null,
+        4,
+        null,
+        null,
+        1,
+        28,
+        null,
+        null,
+        1,
+        28,
+        null,
         null
       ],
       "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/post.rb": [
@@ -105,6 +147,6 @@
         null
       ]
     },
-    "timestamp": 1506004337
+    "timestamp": 1506004496
   }
 }
