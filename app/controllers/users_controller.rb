@@ -1,26 +1,14 @@
 
 class UsersController < Clearance::UsersController
-
-  # def show
-  #   # @user = current_user
-  # end
-
   def edit
     @user = current_user
   end
 
   def update
-   @user = current_user
-   if @user.update(post_params)
-     redirect_to action: :show
-   else
-     render 'show'
-   end
+    @user = current_user
+    @user.update(post_params)
+    redirect_to action: :show
  end
-
-  # def edit
-  #   @user.update_attribute(:name)
-  # end
 
   private
 
@@ -50,7 +38,5 @@ class UsersController < Clearance::UsersController
 
   def post_params
     params.require(:user).permit(:name, :bio, :interests, :location)
-
   end
-
 end

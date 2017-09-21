@@ -29,11 +29,11 @@ RSpec.feature "Profile", type: :feature do
       click_link("Profile")
       expect(page).to have_content('Michael')
       expect(page).to have_content('DOB: 01/01/1970')
+      expect(page).to have_content('Bio: I am Michael')
       expect(page).to have_content('Interests: yoga, crack')
       expect(page).to have_content('Location: Earth')
       expect(page).to have_link('Edit')
     end
-
 
     scenario "user clicks button to go to edit page" do
       click_link("Profile")
@@ -44,7 +44,19 @@ RSpec.feature "Profile", type: :feature do
       expect(page).to have_selector("input[type='text'][value='Earth']")
     end
 
-  end
+    scenario "user edits profile details" do
+      click_link("Profile")
+      click_link("Edit")
+      fill_in "user_name", with: "Mikey"
+      fill_in "user_bio", with: "Changing my bio yea"
+      click_button("Submit")
+      expect(page).to have_content('Mikey')
+      expect(page).to have_content('DOB: 01/01/1970')
+      expect(page).to have_content('Bio: Changing my bio yea')
+      expect(page).to have_content('Interests: yoga, crack')
+      expect(page).to have_content('Location: Earth')
+    end
 
+  end
 
 end

@@ -3,6 +3,6 @@
   <%= form_for @user, url: {action: 'update'}, method: :put do |form| %>
 
     <%= render partial: '/users/form', object: form %>
-    <%= form.submit %>
+    <%= form.submit "Submit" %>
 
   <% end %>
