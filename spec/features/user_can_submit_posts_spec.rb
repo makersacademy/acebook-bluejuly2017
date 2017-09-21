@@ -25,7 +25,6 @@ RSpec.feature "Timeline", type: :feature do
   end
 
   scenario "Liking posts increases the like counter" do
-    puts Post.last.id
     click_link("Like")
     expect(page).to have_content ("1 like this")
   end
