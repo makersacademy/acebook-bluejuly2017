@@ -1,25 +1,23 @@
 
 
 <h2> Users </h2>
-<% for user in @users
-next if current_user.friendships.exists?(friend_id: user) %>
-  <div class="user">
+<% for user in @potential_friends %>
+  <div id="potential_friends">
     <p>
-      <strong><%=h user.email %></strong>
+      <strong><%= user.email %></strong>
       <%= link_to "Add Friend", friendships_path(:friend_id => user.id), :method => :post %>
-      <div class="clear"></div>
+      </div>
     </p>
-  </div>
 <% end %>
 <br/>
 <br/>
 <h2> Friends </h2>
-
+<div id="friendships">
 <% for friendship in @friendships %>
     <p>
-      <%=h @users.find(friendship.friend_id).email  %>
+      <%= @users.find(friendship.friend_id).email  %>
 
       <%= link_to "Remove Friendship", friendship, :method => :delete %>
-      <div class="clear"></div>
+      </div>
     </p>
 <% end %>
