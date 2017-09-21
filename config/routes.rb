@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resources :users
   resources :photos
 
+  resources :posts
+
+  get '/users/:id/profile', to: 'users#show'
+
+  resources :users, controller: 'users', only: 'create'
 
 
   resources :random_images

@@ -18,7 +18,7 @@ RSpec.feature "Profile", type: :feature do
   describe "User is signed in" do
 
     before(:each) do
-      sign_in
+      sign_up_with("michael@example.com", "secretpassword")
     end
 
     scenario "button on posts page for user profile" do
@@ -27,7 +27,10 @@ RSpec.feature "Profile", type: :feature do
 
     scenario "user clicks profile button and is taken to profile page" do
       click_link("Profile")
-      expect(page).to have_content('Hello')
+      expect(page).to have_content('Michael')
+      expect(page).to have_content('DOB: 01/01/1970')
+      expect(page).to have_content('Interests: yoga, crack')
+      expect(page).to have_content('Location: Earth')
     end
   end
 
