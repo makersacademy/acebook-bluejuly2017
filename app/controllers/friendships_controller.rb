@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+
   def index
     @potential_friends = []
     @users = User.all
@@ -13,19 +14,30 @@ class FriendshipsController < ApplicationController
       end
     end
     potential_friends
+
+
+
   end
 
   def create
-    @friendship1 = current_user.friendships.build(friend_id: params[:friend_id])
-    @friendship2 = User.find(params[:friend_id]).friendships.build(friend_id: current_user.id)
+    def friendship_exists
+      current_user.friendships.exists?(friend_id: params[:friend_id])
+    end
 
-    if @friendship1.save && @friendship2.save
+    def friending_self
+      current_user.id.to_s == params[:friend_id].to_s
+    end
+
+    @friendship1 = current_user.friendships.build(:friend_id => params[:friend_id])
+    @friendship2 = User.find(params[:friend_id]).friendships.build(:friend_id => current_user.id)
+
+    if !friendship_exists && !friending_self && @friendship1.save && @friendship2.save
       flash[:notice] = "Added friend."
-      redirect_to friendships_url
+
     else
       flash[:notice] = "Unable to add friend."
-      redirect_to friendships_url
     end
+    redirect_to friendships_url
   end
 
   def destroy

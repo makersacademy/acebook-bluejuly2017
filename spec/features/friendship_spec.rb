@@ -17,6 +17,12 @@ RSpec.feature "Friendships", type: :feature do
     expect(page).to have_content("test@test.com")
   end
 
+  # scenario "Cannot add self as friend" do
+  #   page.driver.post '/friendships', :friend_id =>
+  #   expect(page).to have_content("Unable to add friend")
+  # end
+
+
   scenario "Can add friend and view them" do
     click_link ("Add Friend")
     within('div#friendships') do
