@@ -1,4 +1,6 @@
 
+<script type="text/javascript" src="javascripts/random_insult.js"></script>
+
 <h2>Newsfeed</h2>
 
 
@@ -16,9 +18,23 @@
   <%= form.submit "Submit" %>
 <% end %>
 
+<br />
+<button id="insult-randomizer">Post Random Insult</button>
+<br />
+
 <% @posts_sorted.each do |post| %>
   <p><%= auto_link(post.message) %>, created at
   <%= "#{post.created_at.strftime("%H:%M:%S, %d %b %Y")}"%>
   </p>
 
 <% end %>
+
+<script>
+  var btn = document.getElementById("insult-randomizer");
+  btn.addEventListener("click", function() {
+    // var insult = generate random insult
+    // make post request to /posts/create => {message: insult}
+    // check response code is 200
+    // win
+  });
+</script>
