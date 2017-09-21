@@ -1,4 +1,6 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
+  acts_as_voter
+
   def change
     create_table :users do |t|
       t.timestamps null: false

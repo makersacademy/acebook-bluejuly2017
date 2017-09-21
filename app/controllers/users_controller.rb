@@ -1,4 +1,3 @@
-
 class UsersController < Clearance::UsersController
   private
 
