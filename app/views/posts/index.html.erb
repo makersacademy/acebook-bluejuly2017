@@ -1,4 +1,4 @@
- 
+
 
 
 <div class="container">
@@ -17,6 +17,9 @@
       <%= form.submit "Submit" %>
     <% end %>
 
+    <br>
+
+    <%= link_to '<button type="button">New Random Thing/dare/to do</button>'.html_safe, newshineything_path %>
 
 
     <% @posts_sorted.each do |post| %>
