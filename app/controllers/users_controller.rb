@@ -1,6 +1,10 @@
 # app/controllers/users_controller.rb
 class UsersController < Clearance::UsersController
 
+  def show
+    @user = current_user
+  end
+  
   private
 
   def user_from_params
@@ -26,5 +30,4 @@ class UsersController < Clearance::UsersController
   def user_params
     params[Clearance.configuration.user_parameter] || Hash.new
   end
-
 end
