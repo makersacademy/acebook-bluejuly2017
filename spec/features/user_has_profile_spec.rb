@@ -19,7 +19,6 @@ RSpec.feature "Profile", type: :feature do
 
     before(:each) do
       sign_up_with("michael@example.com", "secretpassword")
-      # sign_in
     end
 
     scenario "button on posts page for user profile" do
