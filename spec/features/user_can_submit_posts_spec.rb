@@ -29,18 +29,14 @@ RSpec.feature "Timeline", type: :feature do
     expect(page).to have_content ("1 like this")
   end
 
-  scenario "Posts are in reverse order" do
-    add_message('Message 2')
-    time2 = format_time_and_date(Time.now.utc)
-    like_message = "0 like this Like Unlike"
-    message1_string = "Message 1 #{@time1}"
-    message2_string = "Message 2 #{time2}"
-    expect(page).to have_content("#{message2_string} #{like_message} #{message1_string} #{like_message} ")
-  end
-
   scenario "Expect post to show hyperlink" do
     add_message('this is not a link but this is -> www.google.com')
     find_link('www.google.com').visible?
+  end
+
+  scenario "User can delete post" do
+    delete_message("Message 1")
+    expect(page).to_not have_content("Message 1")
   end
 
 end

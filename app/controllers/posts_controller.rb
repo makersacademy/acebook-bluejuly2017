@@ -1,7 +1,13 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:upvote, :downvote]
+
   def create
     @post = Post.create(post_params)
+    redirect_to posts_url
+  end
+
+  def destroy
+    @post = Post.destroy(params[:id])
     redirect_to posts_url
   end
 
