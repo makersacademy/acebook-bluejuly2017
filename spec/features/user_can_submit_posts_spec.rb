@@ -24,4 +24,11 @@ RSpec.feature "Timeline", type: :feature do
     message2_string = "Message 2, created at #{time2}"
     expect(page).to have_content("#{message2_string} #{message1_string}")
   end
+
+  scenario "Expect post to show hyperlink" do
+    add_message('this is not a link but this is -> www.google.com')
+    find_link('www.google.com').visible?
+  end
+
+
 end

@@ -28,6 +28,7 @@ gem "jbuilder", "~> 2.5"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "rails_autolink"
 
 group :test do
   gem "factory_girl_rails"
