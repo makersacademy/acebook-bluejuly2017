@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :random_images
+
   root to: redirect('/posts')
 end

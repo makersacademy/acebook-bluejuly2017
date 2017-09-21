@@ -7,9 +7,8 @@ class RandomImagesController < ApplicationController
     @random_image = random_image(images)
   end
 
-  def reload
-    images = get_images
-    return random_image(images)
+  def show
+    redirect_to '/random_images'
   end
 
   private
@@ -35,5 +34,4 @@ class RandomImagesController < ApplicationController
   def image?(item)
     item.include?('.jpg') || item.include?('.jpeg') || item.include?('.png')
   end
-
 end
