@@ -17,8 +17,12 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore locally uploaded photos (photos)
+/public
+
 /node_modules
 /yarn-error.log
+/coverage/*
 
 .byebug_history
 

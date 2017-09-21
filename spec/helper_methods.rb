@@ -6,3 +6,7 @@ end
 def format_time_and_date(time)
   time.strftime("%H:%M:%S, %d %b %Y")
 end
+
+def delete_message(message)
+  click_link "Delete"
+end
