@@ -1,11 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/helpers/application_helper.rb": [
+      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
+      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
         1,
         1,
         1,
@@ -29,40 +29,54 @@
         null,
         null,
         1,
+        1,
+        1,
+        null,
         null,
         1,
+        0,
+        0,
+        null,
+        null,
+        1,
+<<<<<<< HEAD
         1,
         null,
         null,
         1,
         10,
+=======
+>>>>>>> f4f36cdcb0038f7b175ba0e4bc25c9db3b3efa72
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        8,
         null,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/application_controller.rb": [
+      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/application_controller.rb": [
         1,
         1,
-        1,
-        null
-      ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/post.rb": [
         1,
         1,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/application_record.rb": [
+      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/models/post.rb": [
         1,
         1,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/models/user.rb": [
+      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/models/application_record.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/lizziehard/challenges/week_8/acebook-bluejuly2017/app/controllers/users_controller.rb": [
+      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/models/user.rb": [
         1,
         null,
         1,
@@ -71,6 +85,7 @@
         null,
         1,
         null,
+<<<<<<< HEAD
         1,
         0,
         0,
@@ -92,12 +107,51 @@
         null,
         null,
         1,
-        0,
-        null,
-        null,
+=======
+        1,
         null
+      ],
+      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/users_controller.rb": [
+>>>>>>> f4f36cdcb0038f7b175ba0e4bc25c9db3b3efa72
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1505992236
+=======
+    "timestamp": 1505992210
+>>>>>>> f4f36cdcb0038f7b175ba0e4bc25c9db3b3efa72
   }
 }
