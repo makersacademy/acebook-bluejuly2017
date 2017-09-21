@@ -36,7 +36,7 @@ class FriendsController < ApplicationController
       if !(@friend.nil?)
         @friend.save
         format.html { redirect_to index, notice: 'Friend was successfully created.' }
-        format.json { render :show, status: :created, location: @friend }
+        # format.json { render :show, status: :created, location: @friend }
       else
         format.html { redirect_to index, notice: 'User was not found.' }
         format.json { render json: @friend.errors, status: :unprocessable_entity }
