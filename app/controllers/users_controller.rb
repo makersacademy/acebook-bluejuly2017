@@ -1,4 +1,5 @@
 class UsersController < Clearance::UsersController
+
   private
 
   def user_from_params
@@ -10,18 +11,14 @@ class UsersController < Clearance::UsersController
     interests = user_params.delete(:interests)
     location = user_params.delete(:location)
 
-    Clearance.configuration.user_model.new(user_params).tap do |user|
-      user.email = email
-      user.password = password
-      user.name = name
-      user.bio = bio
-      user.dob = dob
-      user.interests = interests
-      user.location = location
-    end
+
+  def post_params
+    params.require(:user).permit(:message)
   end
+
 
   def user_params
     params[Clearance.configuration.user_parameter] || Hash.new
   end
+
 end

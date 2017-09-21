@@ -11,11 +11,21 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
+
 ActiveRecord::Schema.define(version: 20170920095341) do  # Alt version: 20170919102348
 
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "friend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 
 
   create_table "photos", force: :cascade do |t|
@@ -31,9 +41,8 @@ ActiveRecord::Schema.define(version: 20170920095341) do  # Alt version: 20170919
     t.datetime "updated_at", null: false
   end
 
-  create_table "reactions", force: :cascade do |t|
-    t.string "reaction_name"
-    t.integer "counter"
+  create_table "posts", force: :cascade do |t|
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
