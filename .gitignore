@@ -22,3 +22,6 @@
 /coverage/*
 
 .byebug_history
+
+# Ignore simplecov html
+/coverage

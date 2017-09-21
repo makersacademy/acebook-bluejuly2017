@@ -38,5 +38,9 @@ RSpec.feature "Timeline", type: :feature do
     expect(page).to have_content("#{message2_string} #{like_message} #{message1_string} #{like_message} ")
   end
 
+  scenario "Expect post to show hyperlink" do
+    add_message('this is not a link but this is -> www.google.com')
+    find_link('www.google.com').visible?
+  end
 
 end

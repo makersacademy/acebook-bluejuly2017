@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/users/:id/profile', to: 'users#show'
+
   root to: redirect('/posts')
 end

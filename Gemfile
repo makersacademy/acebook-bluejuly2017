@@ -30,6 +30,7 @@ gem 'bootstrap-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "rails_autolink"
 
 group :test do
   gem "factory_girl_rails"
@@ -43,6 +44,8 @@ group :development, :test do
   gem "launchy"
   gem "rspec-rails", "~> 3.5"
   gem "selenium-webdriver"
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
 end
 
 group :development do
