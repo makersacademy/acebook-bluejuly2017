@@ -15,7 +15,7 @@
     <% end %>
 
     <% @posts_sorted.each do |post| %>
-    <p><%= simple_format(post.message) %>
+    <p><%= simple_format(auto_link(post.message)) %>
       <%= "#{post.created_at.strftime("%H:%M:%S, %d %b %Y")}"%>
     </p>
     <span><%= post.get_upvotes.size %> like this</span>
