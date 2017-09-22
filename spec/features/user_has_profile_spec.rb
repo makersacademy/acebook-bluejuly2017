@@ -19,10 +19,11 @@ RSpec.feature "Profile", type: :feature do
 
     before(:each) do
       sign_up_with("michael@example.com", "secretpassword")
+
     end
 
     scenario "button on posts page for user profile" do
-      expect(page).to have_selector('button[type=submit][value="Profile"]')
+      expect(page).to have_link('Profile')
     end
 
     scenario "user clicks profile button and is taken to profile page" do

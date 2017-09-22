@@ -1,4 +1,3 @@
-
 class UsersController < Clearance::UsersController
   def edit
     @user = current_user
@@ -35,7 +34,7 @@ class UsersController < Clearance::UsersController
   def user_params
     params[Clearance.configuration.user_parameter] || Hash.new
   end
-
+  
   def post_params
     params.require(:user).permit(:name, :bio, :interests, :location)
   end
