@@ -1,19 +1,19 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/helpers/application_helper.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/helpers/photos_helper.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/helpers/photos_helper.rb": [
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/helpers/random_images_helper.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/helpers/random_images_helper.rb": [
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/photos_controller.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/photos_controller.rb": [
         1,
         1,
         null,
@@ -89,13 +89,13 @@
         null,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/application_controller.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/application_controller.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
         1,
         1,
         null,
@@ -135,7 +135,7 @@
         null,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/random_images_controller.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/random_images_controller.rb": [
         1,
         1,
         null,
@@ -173,17 +173,17 @@
         null,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/models/post.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/post.rb": [
         1,
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/models/application_record.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/models/user.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/user.rb": [
         1,
         1,
         null,
@@ -193,12 +193,12 @@
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/models/photo.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/photo.rb": [
         1,
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/uploaders/image_uploader.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/uploaders/image_uploader.rb": [
         null,
         null,
         1,
@@ -249,7 +249,7 @@
         null,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/friendships_controller.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/friendships_controller.rb": [
         1,
         1,
         13,
@@ -300,13 +300,13 @@
         null,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/models/friendship.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/friendship.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/users_controller.rb": [
+      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -340,6 +340,6 @@
         null
       ]
     },
-    "timestamp": 1506089188
+    "timestamp": 1506091447
   }
 }
