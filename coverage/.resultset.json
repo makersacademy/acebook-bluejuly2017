@@ -1,19 +1,23 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/helpers/application_helper.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/helpers/photos_helper.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/helpers/photos_helper.rb": [
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/helpers/random_images_helper.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/helpers/random_images_helper.rb": [
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/photos_controller.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/helpers/rooms_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/controllers/photos_controller.rb": [
         1,
         1,
         null,
@@ -89,13 +93,13 @@
         null,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/application_controller.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/controllers/application_controller.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/controllers/posts_controller.rb": [
         1,
         1,
         null,
@@ -135,7 +139,7 @@
         null,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/random_images_controller.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/controllers/random_images_controller.rb": [
         1,
         1,
         null,
@@ -173,17 +177,21 @@
         null,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/post.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/models/message.rb": [
+        1,
+        null
+      ],
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/application_record.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/models/post.rb": [
         1,
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/user.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/models/user.rb": [
         1,
         1,
         null,
@@ -193,12 +201,12 @@
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/photo.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/models/photo.rb": [
         1,
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/uploaders/image_uploader.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/uploaders/image_uploader.rb": [
         null,
         null,
         1,
@@ -249,7 +257,7 @@
         null,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/friendships_controller.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/controllers/friendships_controller.rb": [
         1,
         1,
         13,
@@ -300,13 +308,13 @@
         null,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/models/friendship.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/models/friendship.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/USMAC/Desktop/projects/week_8/acebook-bluejuly2017/app/controllers/users_controller.rb": [
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -338,8 +346,15 @@
         0,
         null,
         null
+      ],
+      "/Users/inganeaves/Desktop/Makers/acebook-bluejuly2017/app/controllers/rooms_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1506091447
+    "timestamp": 1506094519
   }
 }

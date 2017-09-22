@@ -12,10 +12,25 @@
       <% end %>
 
 
-      <% @posts_sorted.each do |post| %>
-        <p><%= simple_format(auto_link(post.message)) %>
+<% @posts_sorted.each do |post| %>
+  
+       <p><%= simple_format(auto_link(post.message)) %>
           <%= "#{post.created_at.strftime("%H:%M:%S, %d %b %Y")}"%>
         </p>
+        <div id="share-buttons">
+           <!-- Email -->
+       <a href="mailto:?Subject=Simple <%= post.message %>">
+           <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+         </a>
+       <!-- Facebook -->
+       <a href="http://www.facebook.com/sharer.php" target="_blank">
+           <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+       </a>
+       <!-- Twitter -->
+       <a href="https://twitter.com/share?text=<%= post.message %>;" target="_blank">
+           <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+     </a>
+     </div>
         <span><%= post.get_upvotes.size %> like this</span>
         <br>
         <% unless (current_user.nil?) %>
