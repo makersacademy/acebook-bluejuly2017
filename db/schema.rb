@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170920095341) do  # Alt version: 20170919
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-  
+
   create_table "photos", force: :cascade do |t|
     t.text "description"
     t.string "image"

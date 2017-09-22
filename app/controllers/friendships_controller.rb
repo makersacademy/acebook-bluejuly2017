@@ -1,5 +1,4 @@
 class FriendshipsController < ApplicationController
-
   def index
     @potential_friends = []
     @users = User.all
@@ -14,9 +13,6 @@ class FriendshipsController < ApplicationController
       end
     end
     potential_friends
-
-
-
   end
 
   def create
@@ -28,8 +24,8 @@ class FriendshipsController < ApplicationController
       current_user.id.to_s == params[:friend_id].to_s
     end
 
-    @friendship1 = current_user.friendships.build(:friend_id => params[:friend_id])
-    @friendship2 = User.find(params[:friend_id]).friendships.build(:friend_id => current_user.id)
+    @friendship1 = current_user.friendships.build(friend_id: params[:friend_id])
+    @friendship2 = User.find(params[:friend_id]).friendships.build(friend_id: current_user.id)
 
     if !friendship_exists && !friending_self && @friendship1.save && @friendship2.save
       flash[:notice] = "Added friend."

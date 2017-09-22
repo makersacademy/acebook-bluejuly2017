@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :photos
   resources :friendships
 
-
   resources :random_images
 
   resources :posts do
