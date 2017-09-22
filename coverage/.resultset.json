@@ -307,20 +307,18 @@
         null
       ],
       "/Users/stephengeller/Desktop/Projects/makers-academy/week-8/acebook-bluejuly2017/app/controllers/users_controller.rb": [
+<<<<<<< HEAD
         1,
         1,
         1,
         null,
+=======
+        0,
+        0,
+        0,
+        0,
+>>>>>>> master
         null,
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         0,
         null,
         0,
@@ -332,14 +330,30 @@
         0,
         0,
         null,
-        null,
-        null,
-        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         null,
+<<<<<<< HEAD
         null
       ]
     },
     "timestamp": 1506080114
+=======
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1506079230
+>>>>>>> master
   }
 }
