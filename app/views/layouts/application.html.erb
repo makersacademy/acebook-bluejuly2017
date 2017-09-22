@@ -38,6 +38,7 @@
         <ul class="nav navbar-nav">
           <% if signed_in? %>
               <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
+              <li><a href="/friendships">Friends</a></li>
           <% else %>
               <li><%= link_to 'Sign in', sign_in_path %></li>
           <% end %>
