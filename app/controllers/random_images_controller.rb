@@ -1,5 +1,4 @@
 class RandomImagesController < ApplicationController
-
   IMAGE_PATH = "app/assets/images"
 
   def index
