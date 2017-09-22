@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get '/users/:id/profile', to: 'users#show'
 
+  get '/users/:id/edit', to: 'users#edit'
+  put '/users/:id/edit', to: 'users#update'
   post '/posts/:id', to: 'posts#destroy'
 
   root to: redirect('/posts')
