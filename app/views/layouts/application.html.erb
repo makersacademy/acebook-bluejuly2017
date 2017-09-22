@@ -45,7 +45,7 @@
           <% end %>
           <li><a href="/posts">Posts</a></li>
           <% if signed_in? %>
-          <li><a href="/users/<%= current_user.id%>/profile">Profile</a></li>
+          <li><a href="/users/<%= current_user.id%>/profile" value="profile">Profile</a></li>
           <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->

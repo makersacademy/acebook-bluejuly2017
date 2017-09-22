@@ -1,12 +1,6 @@
 <div class="container">
   <div class="col-md-2 col-md-offset-5">
 
-  <% if signed_in? %>
-    <a href="/users/<%= current_user.id%>/profile">
-      <button type="submit" value="Profile">Profile</button>
-    </a>
-  <% end %>
-
     <div class="centered">
       <h2>Newsfeed</h2>
       <% unless (current_user.nil?) %>
