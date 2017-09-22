@@ -19,14 +19,16 @@ RSpec.feature "Profile", type: :feature do
 
     before(:each) do
       sign_in
+      visit('/posts')
     end
 
     scenario "button on posts page for user profile" do
-      expect(page).to have_selector('button[type=submit][value="Profile"]')
+      expect(page).to have_link('Profile')
     end
 
     scenario "user clicks profile button and is taken to profile page" do
-      click_link("Profile")
+      click_link('Profile')
+      save_and_open_page
       expect(page).to have_content('Hello')
     end
   end
