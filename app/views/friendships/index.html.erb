@@ -1,0 +1,22 @@
+
+
+<h2> Users </h2>
+<% for user in @potential_friends %>
+  <div id="potential_friends">
+    <p>
+      <strong><%= user.email %></strong>
+      <%= link_to "Add Friend", friendships_path(:friend_id => user.id), :method => :post %>
+      </div>
+    </p>
+<% end %>
+<br/>
+<br/>
+<h2> Friends </h2>
+<div id="friendships">
+<% for friendship in @friendships %>
+    <p>
+      <%= @users.find(friendship.friend_id).email  %>
+      <%= link_to "Remove Friendship", friendship, :method => :delete %>
+    </p>
+<% end %>
+</div>

@@ -16,6 +16,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -38,10 +39,15 @@
         <ul class="nav navbar-nav">
           <% if signed_in? %>
               <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
+              <li><a href="/friendships">Friends</a></li>
+              <li><a href="/photos">Photos</a></li>
           <% else %>
               <li><%= link_to 'Sign in', sign_in_path %></li>
           <% end %>
           <li><a href="/posts">Posts</a></li>
+          <% if signed_in? %>
+          <li><a href="/users/<%= current_user.id%>/profile" value="profile">Profile</a></li>
+          <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
